@@ -9,7 +9,7 @@ import { useBouncerStore } from '@/stores/bouncer';
 import Bouncer from './Bouncer.vue';
 import { computed } from 'vue';
 const bouncerStore = useBouncerStore();
-const bouncers = computed(() => bouncerStore.filteredBouncer);
+const bouncers = computed(() => bouncerStore.filteredBouncers);
 </script>
 
 <style>
