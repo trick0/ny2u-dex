@@ -1,5 +1,11 @@
 [
   {
+    "name": "hero",
+    "baseYeetPower": 200,
+    "ap": 7,
+    "type": "normal"
+  },
+  {
     "name": "slimo",
     "baseYeetPower": 200,
     "ap": 7,
@@ -139,6 +145,12 @@
   },
   {
     "name": "chillo",
+    "baseYeetPower": 200,
+    "ap": 7,
+    "type": "normal"
+  },
+  {
+    "name": "cacto",
     "baseYeetPower": 200,
     "ap": 7,
     "type": "normal"
