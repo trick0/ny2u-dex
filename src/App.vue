@@ -6,7 +6,7 @@ const bouncerStore = useBouncerStore();
 </script>
 
 <template>
-  <div class="text-2xl font-bold m-5 text-center">
+  <div class="text-6xl font-bold mx-5 my-8 text-center">
     ??? DEX
   </div>
   <div>

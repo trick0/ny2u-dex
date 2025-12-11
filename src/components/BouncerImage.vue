@@ -1,4 +1,4 @@
-<template>
+<template lang="html">
     <div class="bouncer-image"></div>
 </template>
 
@@ -7,13 +7,15 @@ import { computed } from 'vue';
 const IMAGE_HEIGHT = 32;
 const props = defineProps(["id"]);
 const heightPosition = computed(() => `-${props.id * IMAGE_HEIGHT}px`);
+const heightPx = computed(() => `${IMAGE_HEIGHT * 2}px`);
+const sizePx = computed(() => `${IMAGE_HEIGHT}px`);
 </script>
 
 <style scoped>
 .bouncer-image {
-    width: 32px;
-    height: 32px;
-    background-size: 64px;
+    width: v-bind(sizePx);
+    height: v-bind(sizePx);
+    background-size: v-bind(heightPx);
     image-rendering: pixelated;
     background-image: url("/sheet.png");
     background-position-x: 0px;
@@ -27,7 +29,7 @@ const heightPosition = computed(() => `-${props.id * IMAGE_HEIGHT}px`);
     }
 
     to {
-        background-position-x: 64px;
+        background-position-x: v-bind(heightPx);
     }
 }
 </style>

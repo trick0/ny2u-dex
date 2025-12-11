@@ -1,5 +1,5 @@
 <template lang="html">
-    <div class="bouncer-list gap-4 grid grid-cols-5 m-auto">
+    <div class="bouncer-list md:gap-4 sm:gap grid md:grid-cols-5 sm:grid-cols-3 m-auto">
         <Bouncer v-for="(bouncer) of bouncers" :bouncer="bouncer" :id="bouncer.id" :key="bouncer.name" />
     </div>
 </template>
@@ -14,6 +14,6 @@ const bouncers = computed(() => bouncerStore.filteredBouncers);
 
 <style>
 .bouncer-list {
-    width: 720px;
+    max-width: 720px;
 }
 </style>
