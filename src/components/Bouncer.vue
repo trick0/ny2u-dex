@@ -2,7 +2,7 @@
     <div class="bouncer m-4">
         <div
             class="transition-all duration-300 ease-in-out hover:bg-gray-800 bg-gray-900 hover:m-2 image aspect-square cursor-pointer border-5 hover:border-gray-400 rounded-full flex justify-center items-center">
-            <BouncerImage :id="id" />
+            <BouncerImage :id="id" :key="bouncer.name" />
         </div>
         <div class="name my-4 rounded-full bg-white text-gray-900 text-center">
             {{ bouncer.name }}

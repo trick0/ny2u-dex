@@ -4,7 +4,7 @@ import bouncerDB from '@/assets/bouncers.json';
 
 export const useBouncerStore = defineStore('bouncer', () => {
 
-  const bouncers = ref(bouncerDB);
+  const bouncers = ref(bouncerDB.map((b, index) => ({ ...b, id: index})));
   const filter = ref();
   const filteredBouncer = computed(() => bouncers.value.filter((bouncer) => filter.value ? bouncer.name.includes(filter.value) : bouncer))
   const bouncersCount = computed(() => bouncers.value.length)

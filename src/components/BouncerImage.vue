@@ -1,6 +1,5 @@
 <template>
-    <div class="bouncer-image">
-    </div>
+    <div class="bouncer-image"></div>
 </template>
 
 <script setup lang="ts">
