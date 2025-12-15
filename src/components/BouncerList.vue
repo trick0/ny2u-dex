@@ -14,23 +14,7 @@
                 </div>
                 <hr>
             </template>
-            <div>
-                <div class="bouncer-type my-2">
-                    <span class="font-bold">Type:</span>
-                    <span
-                        class="rounded-md p-2 m-2 border border-transparent text-sm text-white bg-neutral-800 transition-all shadow-sm">
-                        {{ selectedBouncer.type }}
-                    </span>
-                </div>
-                <div class="bouncer-baseYeetPower my-2">
-                    <span class="font-bold">Base Yeet Power:</span>
-                    <span>{{ selectedBouncer.baseYeetPower }}</span>
-                </div>
-                <div class="bouncer-ap my-2">
-                    <span class="font-bold">AP:</span>
-                    <span>{{ selectedBouncer.ap }}</span>
-                </div>
-            </div>
+            <BouncerDetails :id="selectedBouncer.id" :bouncer="selectedBouncer" />
             <template #footer>
                 <button
                     class="inline-flex justify-center cursor-pointer rounded-md bg-black/10 px-3 py-2 text-sm font-semibold text-black inset-ring inset-ring-black/5 hover:bg-black/20 sm:mt-0 sm:w-auto"
@@ -43,13 +27,13 @@
 </template>
 
 <script setup lang="ts">
+import type { BouncerType } from '@/models/models';
 import { useBouncerStore } from '@/stores/bouncer';
 import { computed, ref } from 'vue';
-import BouncerImage from './BouncerImage.vue';
 import Bouncer from './Bouncer.vue';
+import BouncerDetails from './BouncerDetails.vue';
+import BouncerImage from './BouncerImage.vue';
 import Modal from './Modal.vue';
-import type { BouncerType } from '@/models/models';
-import type BouncerImageVue from './BouncerImage.vue';
 
 const bouncerStore = useBouncerStore();
 const bouncers = computed(() => bouncerStore.filteredBouncers);

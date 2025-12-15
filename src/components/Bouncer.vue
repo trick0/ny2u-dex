@@ -15,6 +15,5 @@
 
 <script setup lang="ts">
 import BouncerImage from './BouncerImage.vue';
-
 const props = defineProps(["id", "bouncer"]);
 </script>
