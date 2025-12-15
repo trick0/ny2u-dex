@@ -154,5 +154,23 @@
     "baseYeetPower": 200,
     "ap": 7,
     "type": "normal"
+  },
+  {
+    "name": "ninjo",
+    "baseYeetPower": 200,
+    "ap": 7,
+    "type": "tireless"
+  },
+  {
+    "name": "flammo",
+    "baseYeetPower": 200,
+    "ap": 7,
+    "type": "fire"
+  },
+  {
+    "name": "stono",
+    "baseYeetPower": 200,
+    "ap": 7,
+    "type": "tank"
   }
 ]
