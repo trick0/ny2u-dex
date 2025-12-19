@@ -1,10 +1,10 @@
 <template lang="html">
-    <div class="bouncer-list md:gap-4 sm:gap grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 m-auto">
+    <div class="bouncer-list md:gap-4 sm:gap grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 m-auto">
         <Bouncer v-for="(bouncer) of bouncers" :bouncer="bouncer" :id="bouncer.id" :key="bouncer.name"
             @click="selectBouncer(bouncer)" />
         <Modal v-if="selectedBouncer && selectedBouncer.name" @onClose="closeModal">
             <template #header>
-                <div class="bouncer-name text-3xl font-bold my-2 capitalize flex flex-inline items-center">
+                <div class="bouncer-name text-3xl font-bold my-2 mb-4 capitalize flex flex-inline items-center">
                     <div class="bouncer-image-background bg-neutral-900 rounded-full flex justify-center items-center">
                         <BouncerImage :id="selectedBouncer.id" />
                     </div>
