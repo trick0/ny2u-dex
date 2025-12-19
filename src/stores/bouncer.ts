@@ -34,5 +34,15 @@ export const useBouncerStore = defineStore('bouncer', () => {
     return bouncers.value[id];
   }
 
-  return { bouncers, bouncerTypes, activeFilterTypes, filteredBouncers, bouncersCount, filter, getBouncerById, getBouncerByType, toggleTypeFilter, resetTypeFilter }
+  function getOwnedBouncers() {
+    const ownedBouncers = localStorage.getItem("bouncers");
+    const bouncers = ownedBouncers ? JSON.parse(ownedBouncers || "") || [] : [];
+    return bouncers;
+  }
+
+  function setOwnedBouncers(bouncers: {}) {
+    localStorage.setItem("bouncers", JSON.stringify(bouncers));
+  }
+
+  return { bouncers, bouncerTypes, activeFilterTypes, filteredBouncers, bouncersCount, filter, getBouncerById, getBouncerByType, toggleTypeFilter, resetTypeFilter, getOwnedBouncers, setOwnedBouncers }
 })

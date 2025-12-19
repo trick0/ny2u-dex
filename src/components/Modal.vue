@@ -1,7 +1,8 @@
 <template>
     <div class="modal-container flex justify-center items-center fixed w-full h-full m-0 bg-black/75">
         <div class="back fixed w-full h-full m-0 bg-black/75" @click="closeModal"></div>
-        <div class="modal relative md:max-w-md sm:max-w-sm lg:max-w-lg m-auto bg-white rounded text-neutral-800 p-4">
+        <div :class="size"
+            class="modal relative md:max-w-md sm:max-w-sm lg:max-w-lg m-auto bg-white rounded text-neutral-800 p-4">
             <slot name="header"></slot>
             <div class="my-4">
                 <slot></slot>
@@ -14,6 +15,7 @@
 </template>
 
 <script setup lang="ts">
+const props = defineProps(["size"]);
 const emits = defineEmits(["onClose"]);
 function closeModal() {
     console.log('on close');
@@ -28,9 +30,28 @@ function closeModal() {
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 9999;
+    animation: enter ease-out 350ms forwards;
 }
 
 .modal {
     width: 720px
+}
+
+.modal-xl {
+    width: 1200px !important;
+    max-width: 1200px !important;
+}
+
+@keyframes enter {
+    from {
+        margin-top: -15px;
+        margin-bottom: 0px;
+    }
+
+    to {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
 }
 </style>
