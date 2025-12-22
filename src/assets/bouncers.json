@@ -1,74 +1,74 @@
 [
   {
     "name": "hero",
-    "baseYeetPower": 200,
-    "ap": 7,
+    "baseYeetPower": 100,
+    "ap": 10,
     "type": "normal"
   },
   {
     "name": "slimo",
-    "baseYeetPower": 200,
-    "ap": 7,
+    "baseYeetPower": 100,
+    "ap": 5,
     "type": "poison"
   },
   {
     "name": "ghosto",
     "baseYeetPower": 200,
-    "ap": 7,
+    "ap": 4,
     "type": "scary"
   },
   {
     "name": "skullo",
-    "baseYeetPower": 200,
-    "ap": 7,
+    "baseYeetPower": 80,
+    "ap": 10,
     "type": "scary"
   },
   {
     "name": "browno",
-    "baseYeetPower": 200,
-    "ap": 7,
+    "baseYeetPower": 120,
+    "ap": 8,
     "type": "mud"
   },
   {
     "name": "smilo",
-    "baseYeetPower": 200,
-    "ap": 7,
+    "baseYeetPower": 100,
+    "ap": 5,
     "type": "evil"
   },
   {
     "name": "bruno",
-    "baseYeetPower": 200,
-    "ap": 7,
+    "baseYeetPower": 50,
+    "ap": 15,
     "type": "normal"
   },
   {
     "name": "corno",
     "baseYeetPower": 200,
-    "ap": 7,
+    "ap": 5,
     "type": "assault"
   },
   {
     "name": "joko",
-    "baseYeetPower": 200,
-    "ap": 7,
+    "baseYeetPower": "100",
+    "ap": "?",
     "type": "madness"
   },
   {
     "name": "raino",
-    "baseYeetPower": 200,
-    "ap": 7,
+    "baseYeetPower": 100,
+    "ap": 5,
     "type": "water"
   },
   {
     "name": "tuco",
     "baseYeetPower": 200,
-    "ap": 7,
+    "ap": 4,
     "type": "flying"
   },
   {
     "name": "emojo",
-    "baseYeetPower": 200,
-    "ap": 7,
+    "baseYeetPower": "?",
+    "ap": "?",
     "type": "?"
   },
   {
@@ -79,79 +79,79 @@
   },
   {
     "name": "ducko",
-    "baseYeetPower": 200,
-    "ap": 7,
+    "baseYeetPower": 80,
+    "ap": 9,
     "type": "flying"
   },
   {
     "name": "terminato",
     "baseYeetPower": 200,
-    "ap": 7,
+    "ap": 5,
     "type": "tank"
   },
   {
     "name": "joyco",
-    "baseYeetPower": 200,
-    "ap": 7,
+    "baseYeetPower": 100,
+    "ap": 5,
     "type": "planet"
   },
   {
     "name": "peacho",
-    "baseYeetPower": 200,
+    "baseYeetPower": 100,
     "ap": 7,
     "type": "planet"
   },
   {
     "name": "chicko",
-    "baseYeetPower": 200,
-    "ap": 7,
+    "baseYeetPower": 70,
+    "ap": 10,
     "type": "flying"
   },
   {
     "name": "knighto",
-    "baseYeetPower": 200,
-    "ap": 7,
+    "baseYeetPower": 100,
+    "ap": 5,
     "type": "samurai"
   },
   {
     "name": "avokado",
-    "baseYeetPower": 200,
-    "ap": 7,
+    "baseYeetPower": 100,
+    "ap": 15,
     "type": "tireless"
   },
   {
     "name": "oofo",
-    "baseYeetPower": 200,
-    "ap": 7,
+    "baseYeetPower": 50,
+    "ap": 8,
     "type": "flying"
   },
   {
     "name": "hando",
     "baseYeetPower": 200,
-    "ap": 7,
+    "ap": 10,
     "type": "samurai"
   },
   {
     "name": "smarto",
-    "baseYeetPower": 200,
+    "baseYeetPower": 100,
     "ap": 7,
     "type": "planet"
   },
   {
     "name": "o",
-    "baseYeetPower": 200,
+    "baseYeetPower": 100,
     "ap": 7,
     "type": "normal"
   },
   {
     "name": "chillo",
-    "baseYeetPower": 200,
+    "baseYeetPower": 80,
     "ap": 7,
     "type": "normal"
   },
   {
     "name": "cacto",
-    "baseYeetPower": 200,
+    "baseYeetPower": 100,
     "ap": 7,
     "type": "normal"
   },
@@ -163,13 +163,13 @@
   },
   {
     "name": "flammo",
-    "baseYeetPower": 200,
+    "baseYeetPower": 80,
     "ap": 7,
     "type": "fire"
   },
   {
     "name": "stono",
-    "baseYeetPower": 200,
+    "baseYeetPower": 100,
     "ap": 7,
     "type": "tank"
   },
@@ -181,13 +181,13 @@
   },
   {
     "name": "sneko",
-    "baseYeetPower": 200,
-    "ap": 7,
+    "baseYeetPower": 20,
+    "ap": 20,
     "type": "ghost"
   },
   {
     "name": "nullo",
-    "baseYeetPower": 200,
+    "baseYeetPower": 80,
     "ap": 7,
     "type": "?"
   }

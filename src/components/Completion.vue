@@ -3,8 +3,10 @@
         <span class="mx-3">
             {{ progress }} / 151
         </span>
-        <div class="bar rounded-xl relative border-2 border-neutral-500 p-2 m-2">
-            <div class="progress rounded-xl border-2 border-emerald-700 bg-emerald-600 absolute"></div>
+        <div class="bar rounded-full relative border-2 border-neutral-500 p-2 m-2">
+            <div class="progress rounded-full border-2 border-emerald-700 bg-emerald-600 pl-2 font-bold text-xs">
+                {{ width }}
+            </div>
         </div>
     </div>
 </template>
