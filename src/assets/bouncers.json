@@ -172,5 +172,23 @@
     "baseYeetPower": 200,
     "ap": 7,
     "type": "tank"
+  },
+  {
+    "name": "gobblo",
+    "baseYeetPower": 200,
+    "ap": 7,
+    "type": "madness"
+  },
+  {
+    "name": "sneko",
+    "baseYeetPower": 200,
+    "ap": 7,
+    "type": "ghost"
+  },
+  {
+    "name": "nullo",
+    "baseYeetPower": 200,
+    "ap": 7,
+    "type": "?"
   }
 ]
