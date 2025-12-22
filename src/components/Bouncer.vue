@@ -1,5 +1,5 @@
 <template>
-    <div class="bouncer sm:m-8 md:m-4 m-4 cursor-pointer">
+    <div class="bouncer sm:my-8 md:my-4 my-4 cursor-pointer">
         <div
             class="transition-all duration-300 ease-in-out hover:bg-neutral-800 bg-neutral-900 hover:m-2 image aspect-square border-5 hover:border-gray-400 rounded-full flex justify-center items-center">
             <BouncerImage :id="id" :key="bouncer.name" />

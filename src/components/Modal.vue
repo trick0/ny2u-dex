@@ -1,8 +1,7 @@
 <template>
     <div class="modal-container flex justify-center items-center fixed w-full h-full m-0 bg-black/75">
         <div class="back fixed w-full h-full m-0 bg-black/75" @click="closeModal"></div>
-        <div :class="size"
-            class="modal relative md:max-w-md sm:max-w-sm lg:max-w-lg m-auto bg-white rounded text-neutral-800 p-4">
+        <div :class="[size, theme]" class="modal relative md:max-w-md sm:max-w-sm lg:max-w-lg m-auto rounded p-4">
             <slot name="header"></slot>
             <div class="my-4">
                 <slot></slot>
@@ -15,8 +14,13 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps(["size"]);
+import { computed } from 'vue';
+
+const props = defineProps(["size", "theme"]);
 const emits = defineEmits(["onClose"]);
+
+const theme = computed(() => props.theme == "dark" ? "bg-neutral-800 text-white" : "bg-white text-neutral-800")
+
 function closeModal() {
     console.log('on close');
 

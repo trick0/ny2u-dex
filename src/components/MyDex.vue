@@ -4,7 +4,7 @@
             Show my Dex
         </div>
         <Transition>
-            <Modal :size="'modal-xl'" v-if="dexVisibility" @onClose="closeModal">
+            <Modal :size="'modal-xl'" :theme="'dark'" v-if="dexVisibility" @onClose="closeModal">
                 <template #header>
                     <div class="text-xl font-bold text-center">
                         my dex
@@ -18,7 +18,7 @@
                 </div>
                 <template #footer>
                     <button
-                        class="inline-flex justify-center cursor-pointer rounded-md bg-black/10 px-3 py-2 text-sm font-semibold text-black inset-ring inset-ring-black/5 hover:bg-black/20 sm:mt-0 sm:w-auto"
+                        class="inline-flex justify-center cursor-pointer rounded-md bg-white/10 px-3 py-2 text-sm font-semibold text-white inset-ring inset-ring-black/5 hover:bg-white/20 sm:mt-0 sm:w-auto"
                         @click="closeModal">
                         Close
                     </button>
