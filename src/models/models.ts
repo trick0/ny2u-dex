@@ -1,6 +1,6 @@
 export type BouncerType = {
     name: string;
-    baseYeetPower: number;
-    ap: number;
+    baseYeetPower: number | string;
+    ap: number | string;
     type: string;
 }
