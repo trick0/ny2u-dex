@@ -1,5 +1,6 @@
 <template lang="html">
-    <div class="bouncer-list md:gap-4 sm:gap grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 m-auto">
+    <div
+        class="bouncer-list md:gap-4 sm:gap grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 m-auto justify-items-center">
         <Bouncer v-for="(bouncer) of bouncers" :bouncer="bouncer" :id="bouncer.id" :key="bouncer.name"
             @click="selectBouncer(bouncer)" />
         <Transition>
@@ -53,10 +54,6 @@ function closeModal() {
 </script>
 
 <style>
-.bouncer-list {
-    max-width: 720px;
-}
-
 .bouncer-image-background {
     width: 64px;
     height: 64px;

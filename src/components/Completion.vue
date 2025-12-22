@@ -19,10 +19,6 @@ const progress = computed(() => bouncerStore.bouncers.length)
 const width = computed(() => `${~~(100 * (progress.value / 151))}%`)
 </script>
 <style>
-.completion {
-    max-width: 720px;
-}
-
 .progress {
     animation: progress ease-out 1s forwards;
     animation-delay: 1s;

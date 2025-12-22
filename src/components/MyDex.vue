@@ -1,10 +1,11 @@
 <template>
     <div class="mydex-container">
-        <div @click="dexVisibility = true" style="width: 720px" class="m-auto">
+        <div @click="dexVisibility = true" class="m-auto flex border p-8 rounded-xl justify-center cursor-pointer">
             Show my Dex
+            <RectangleStackIcon class="size-6 ml-4" />
         </div>
         <Transition>
-            <Modal :size="'modal-xl'" :theme="'dark'" v-if="dexVisibility" @onClose="closeModal">
+            <Modal :theme="'dark'" v-if="dexVisibility" @onClose="closeModal">
                 <template #header>
                     <div class="text-xl font-bold text-center">
                         my dex
@@ -30,14 +31,21 @@
 <script setup lang="ts">
 import type { BouncerType } from '@/models/models';
 import { useBouncerStore } from '@/stores/bouncer';
-import { computed, onMounted, ref } from 'vue';
+import { computed, onMounted, ref, watch } from 'vue';
 import Modal from './Modal.vue';
 import Bouncer from './Bouncer.vue';
-
+import { RectangleStackIcon } from '@heroicons/vue/24/solid';
+import { usePackStore } from '@/stores/pack';
+const packStore = usePackStore();
 const bouncerStore = useBouncerStore();
 const bouncers = computed(() => bouncerStore.bouncers);
+const packIndexHelper = computed(() => packStore.packIndexHelper);
 const ownedBouncers = ref([]);
 const dexVisibility = ref(false);
+
+watch(packIndexHelper, () => {
+    ownedBouncers.value = bouncerStore.getOwnedBouncers();
+})
 
 onMounted(() => {
     ownedBouncers.value = bouncerStore.getOwnedBouncers();

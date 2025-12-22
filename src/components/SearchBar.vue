@@ -1,11 +1,18 @@
 <template>
-    <div class="search-bar m-auto mt-8 mb-8 rounded bg-neutral-900 p-8">
-        <div class="row text-white text-xl font-bold flex p-4 cursor-pointer rounded hover:bg-neutral-700 bg-neutral-800 items-center"
-            @click="showFilter = !showFilter">
-            Filter
-            <AdjustmentsHorizontalIcon class="size-6 ml-4" />
+    <div class="search-bar my-8 m-auto">
+        <div @click="showFilter = !showFilter">
+            <div class="flex justify-end cursor-pointer">
+                <template v-if="showFilter">
+                    Hide filters
+                    <EyeSlashIcon class="size-6 ml-4" />
+                </template>
+                <template v-else>
+                    Show filters
+                    <AdjustmentsHorizontalIcon class="size-6 ml-4" />
+                </template>
+            </div>
         </div>
-        <div class="row" v-if="showFilter">
+        <div class="row mt-8 mb-8 rounded bg-neutral-900 p-8" v-if="showFilter">
             <div class="row col-12">
                 <div class="search-bar-label text-white my-4">
                     Name
@@ -35,19 +42,14 @@
 </template>
 <script setup lang="ts">
 import { useBouncerStore } from '@/stores/bouncer';
+import { AdjustmentsHorizontalIcon, EyeSlashIcon } from '@heroicons/vue/24/solid';
 import { computed, ref } from 'vue';
-import { AdjustmentsHorizontalIcon } from '@heroicons/vue/24/solid'
 const bouncerStore = useBouncerStore();
 const activeFilterTypes = computed(() => bouncerStore.activeFilterTypes)
 const showFilter = ref(false);
 </script>
 
 <style>
-.search-bar {
-    max-width: 600px;
-    color: #191919;
-}
-
 #bouncer-name-search {
     outline: none;
     width: 100%;

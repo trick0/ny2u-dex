@@ -1,7 +1,7 @@
 <template>
     <div class="modal-container flex justify-center items-center fixed w-full h-full m-0 bg-black/75">
         <div class="back fixed w-full h-full m-0 bg-black/75" @click="closeModal"></div>
-        <div :class="[size, theme]" class="modal relative md:max-w-md sm:max-w-sm lg:max-w-lg m-auto rounded p-4">
+        <div :class="[size, theme]" class="modal relative rounded p-4">
             <slot name="header"></slot>
             <div class="my-4">
                 <slot></slot>

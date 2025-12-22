@@ -2,10 +2,11 @@ import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 import bouncerDB from '@/assets/bouncers.json';
 import typeDB from '@/assets/types.json';
+import type { BouncerType } from '@/models/models';
 
 export const useBouncerStore = defineStore('bouncer', () => {
 
-  const bouncers = ref(bouncerDB.map((b, index) => ({ ...b, id: index})));
+  const bouncers = ref(bouncerDB.map((b, index) => ({ ...b, id: index})) as BouncerType[]);
   const bouncerTypes = ref(typeDB);
   const filter = ref();
   const activeFilterTypes = ref([] as string[]);
@@ -40,9 +41,15 @@ export const useBouncerStore = defineStore('bouncer', () => {
     return bouncers;
   }
 
-  function setOwnedBouncers(bouncers: {}) {
-    localStorage.setItem("bouncers", JSON.stringify(bouncers));
+  function addBouncers(_bouncers: BouncerType[]) {
+    const bouncerList: BouncerType[] = _bouncers.concat(getOwnedBouncers());
+    setOwnedBouncers(Array.from(new Set(bouncerList)));
+    getOwnedBouncers();
   }
 
-  return { bouncers, bouncerTypes, activeFilterTypes, filteredBouncers, bouncersCount, filter, getBouncerById, getBouncerByType, toggleTypeFilter, resetTypeFilter, getOwnedBouncers, setOwnedBouncers }
+  function setOwnedBouncers(_bouncers: {}) {
+    localStorage.setItem("bouncers", JSON.stringify(_bouncers));
+  }
+
+  return { bouncers, bouncerTypes, activeFilterTypes, filteredBouncers, bouncersCount, filter, getBouncerById, getBouncerByType, toggleTypeFilter, resetTypeFilter, getOwnedBouncers, addBouncers, setOwnedBouncers }
 })
