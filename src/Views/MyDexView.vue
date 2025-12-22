@@ -8,7 +8,8 @@
         </RouterLink>
 
         <div class="m-auto">
-            <div class="bouncer-list md:gap-4 sm:gap grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 m-auto">
+            <div
+                class="bouncer-list md:gap-4 sm:gap grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 m-auto justify-items-center">
                 <Bouncer :class="{ 'grayscale opacity-25': !isOwned(bouncer.name) }" v-for="(bouncer) of bouncers"
                     :bouncer="bouncer" :id="bouncer.id" :key="bouncer.name" />
             </div>

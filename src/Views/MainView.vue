@@ -15,7 +15,6 @@
 <script setup lang="ts">
 import BouncerList from '@/components/BouncerList.vue';
 import Completion from '@/components/Completion.vue';
-import MyDex from '@/components/MyDex.vue';
 import Pack from '@/components/Pack.vue';
 import SearchBar from '@/components/SearchBar.vue';
 import { RectangleStackIcon } from '@heroicons/vue/24/solid';
