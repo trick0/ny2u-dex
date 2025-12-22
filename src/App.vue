@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { RouterView } from 'vue-router';
 import BouncerList from './components/BouncerList.vue';
 import Completion from './components/Completion.vue';
 import MyDex from './components/MyDex.vue';
@@ -10,16 +11,16 @@ import SearchBar from './components/SearchBar.vue';
   <div class="text-6xl font-bold mx-5 my-8 text-center">
     ??? DEX
   </div>
-  <div class="app-container m-auto">
-    <Pack />
-    <MyDex />
-    <Completion />
-    <SearchBar />
-    <BouncerList />
+  <div class="app-container m-auto p-4">
+    <RouterView />
   </div>
 </template>
 
 <style>
+html {
+  overflow-y: scroll;
+}
+
 .app-container {
   max-width: 720px;
 }
