@@ -22,6 +22,7 @@ const width = computed(() => `${~~(100 * (progress.value / 151))}%`)
 .progress {
     animation: progress ease-out 1s forwards;
     animation-delay: 1s;
+    width: 1%;
     top: 3px;
     bottom: 3px;
     left: 3px;

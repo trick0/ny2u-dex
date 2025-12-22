@@ -1,10 +1,5 @@
 <script setup lang="ts">
 import type { RouterView } from 'vue-router';
-import BouncerList from './components/BouncerList.vue';
-import Completion from './components/Completion.vue';
-import MyDex from './components/MyDex.vue';
-import Pack from './components/Pack.vue';
-import SearchBar from './components/SearchBar.vue';
 </script>
 
 <template>

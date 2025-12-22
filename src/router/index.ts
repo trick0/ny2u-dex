@@ -1,6 +1,5 @@
-import App from '@/App.vue'
-import MyDex from '@/components/MyDex.vue'
 import MainView from '@/Views/MainView.vue'
+import MyDex from '@/Views/MyDexView.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({

@@ -2,8 +2,8 @@
     <div class="mydex-container">
         <RouterLink :to="'/'">
             <div @click="dexVisibility = true" class="mb-8 m-auto flex p-4 border-b cursor-pointer">
+                <ArrowLeftCircleIcon class="size-6 mr-4" />
                 Back
-                <ArrowLeftCircleIcon class="size-6 ml-4" />
             </div>
         </RouterLink>
 
@@ -21,7 +21,7 @@ import { useBouncerStore } from '@/stores/bouncer';
 import { usePackStore } from '@/stores/pack';
 import { ArrowLeftCircleIcon } from '@heroicons/vue/24/solid';
 import { computed, onMounted, ref, watch } from 'vue';
-import Bouncer from './Bouncer.vue';
+import Bouncer from '../components/Bouncer.vue';
 const packStore = usePackStore();
 const bouncerStore = useBouncerStore();
 const bouncers = computed(() => bouncerStore.bouncers);

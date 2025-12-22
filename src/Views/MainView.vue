@@ -2,8 +2,8 @@
     <div>
         <RouterLink :to="'my'">
             <div class="mb-8 m-auto flex p-4 border-b cursor-pointer">
+                <RectangleStackIcon class="size-6 mr-4" />
                 My Dex
-                <RectangleStackIcon class="size-6 ml-4" />
             </div>
         </RouterLink>
         <Pack />
