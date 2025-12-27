@@ -190,5 +190,23 @@
     "baseYeetPower": 80,
     "ap": 7,
     "type": "?"
+  },
+  {
+    "name": "dwarfo",
+    "baseYeetPower": 150,
+    "ap": 5,
+    "type": "tank"
+  },
+  {
+    "name": "nino",
+    "baseYeetPower": 50,
+    "ap": 15,
+    "type": "?"
+  },
+  {
+    "name": "volto",
+    "baseYeetPower": 50,
+    "ap": 5,
+    "type": "ghost"
   }
 ]
