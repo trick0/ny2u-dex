@@ -1,11 +1,6 @@
 <template>
     <div class="mydex-container">
-        <RouterLink :to="'/'">
-            <div @click="dexVisibility = true" class="mb-8 m-auto flex p-4 border-b cursor-pointer">
-                <ArrowLeftCircleIcon class="size-6 mr-4" />
-                Back
-            </div>
-        </RouterLink>
+        <BackButton />
 
         <div class="m-auto">
             <div
@@ -17,10 +12,10 @@
     </div>
 </template>
 <script setup lang="ts">
+import BackButton from '@/components/BackButton.vue';
 import type { BouncerType } from '@/models/models';
 import { useBouncerStore } from '@/stores/bouncer';
 import { usePackStore } from '@/stores/pack';
-import { ArrowLeftCircleIcon } from '@heroicons/vue/24/solid';
 import { computed, onMounted, ref, watch } from 'vue';
 import Bouncer from '../components/Bouncer.vue';
 const packStore = usePackStore();
